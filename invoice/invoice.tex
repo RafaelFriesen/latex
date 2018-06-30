@@ -1,0 +1,78 @@
+\documentclass{invoice}
+
+% Fill this fields with correct values
+\invoiceno{INVOICE-123456}
+\invoicedate{01-29-2016}
+\duedate{01-29-2016}
+\accountno{12345678}
+\vattaxno{12345687}
+\firstname{FirstName}
+\lastname{Lastname}
+\companyname{CompanyName}
+\email{email@example.com}
+\addressA{Address 1}
+\addressB{Address 2} % might be omitted if empty
+\zipcode{12345}
+\country{Country}
+
+\begin{document}
+
+% Example for single page
+
+\banner
+\pageheader
+\tabletitle
+
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+
+\tablefooter{100.00}{100.00}{17.00}{117.00}
+\paymentdetails
+\impressum
+
+\null\newpage
+
+% Example for first of multipage
+
+\banner
+\pageheader
+\tabletitle
+
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+
+\tablefootertocont
+\manualpage{1 of 2}
+\impressum
+
+\null\newpage
+
+% Example for last of multipage
+
+\banner
+\tabletitlecont
+
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+\tablerow{PRODUCT TYPE}{PRODUCT DESCRIPTION}{UNITS}{AMOUNT}
+
+\tablefooter{100.00}{100.00}{17.00}{117.00}
+\paymentdetails
+\manualpage{2 of 2}
+\impressum
+
+\end{document}
