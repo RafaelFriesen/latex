@@ -15,6 +15,7 @@
 \def\addressA#1{\def\@addressA{#1}}
 \def\addressB#1{\def\@addressB{#1}}
 \def\zipcode#1{\def\@zipcode{#1}}
+\def\city#1{\def\@city{#1}}
 \def\country#1{\def\@country{#1}}
 %\def\#1{\def\@{#1}}
 
@@ -106,7 +107,7 @@
     \@companyname \\
     \@addressA \\
     \ifthenelse{\isundefined{\@addressB}}{}{{\@addressB} \\}
-    \@zipcode \\
+    {\@zipcode} {\@city} \\
     \@country \\
   \end{textblock}
 }
